@@ -1,4 +1,11 @@
-var msg = 'Hello World'
+const http = require('http')
+const server = http.createServer((req, res ) => {
+    res.write('Welcome to our home page')
+    res.end()
+})
+console.log('localhost:5000')
+server.listen(5000)
+
 console.log(msg)
 
 // console.log(__dirname)
@@ -19,7 +26,7 @@ if (count < 10){
 // }
 
 
-const names = require('./04-names')
+const names = require('./4-names')
 const sayHi = require('./5-utils')
 const data = require('./6-alternative-flavor')
 require ('./7-mind-grenade')
